@@ -30,7 +30,7 @@ Add the dependencies in your app/build.gradle:
 ```groovy
 dependencies {
     ....
-    implementation 'com.github.yogacp:android-viewbinding:1.0.0'
+    implementation 'com.github.yogacp:android-viewbinding:x.x.x'
 }
 ```
 
