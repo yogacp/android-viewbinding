@@ -1,9 +1,10 @@
 Android ViewBinding Library
 ========================================================
+----------------------------------------------------------
 
-# A Simple Library to simplify viewbinding delegation in your Android Application
+### A Simple Library to simplify viewbinding delegation in your Android Application
 
-## Using the library
+### Using the library
 Add this to your build.gradle:
 ```groovy
 allprojects {
@@ -93,7 +94,7 @@ class SampleFragment : Fragment(R.layout.fragment_sample) {
 }
 ```
 
-## TODO:
+### TODO:
 - Add DialogFragment viewbinding delegation
 - Add ViewGroup viewbinding delegation to use it in Custom View
 
