@@ -4,7 +4,7 @@ Android ViewBinding Library
 
 ### A Simple Library to simplify viewbinding delegation in your Android Application
 
-### Using the library
+### Add dependencies
 Add this to your build.gradle:
 ```groovy
 allprojects {
@@ -15,7 +15,7 @@ allprojects {
 }
 ```
 
-Add this to your app/build.gradle:
+enable viewbinding in your app/build.gradle:
 ```groovy
 android {
     ....
@@ -23,13 +23,17 @@ android {
         enabled = true
     }
 }
+```
 
+Add the dependencies in your app/build.gradle:
+```groovy
 dependencies {
     ....
     implementation 'com.github.yogacp:android-viewbinding:1.0.0'
 }
 ```
 
+### How to use the library
 Create your regular XML layout. For example, create **activity_sample.xml**:
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
