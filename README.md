@@ -2,9 +2,9 @@ Android ViewBinding Library
 ========================================================
 ----------------------------------------------------------
 
-### A Simple Library to simplify viewbinding delegation in your Android Application
+A Simple Library to simplify viewbinding delegation in your Android Application
 
-### Add dependencies
+### Adding dependencies
 Add this to your build.gradle:
 ```groovy
 allprojects {
