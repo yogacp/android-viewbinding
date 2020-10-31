@@ -1,0 +1,3 @@
+include ':android-viewbinding'
+include ':app'
+rootProject.name = "Android Viewbinding"
