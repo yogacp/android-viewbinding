@@ -3,6 +3,7 @@ Android ViewBinding Library
 ----------------------------------------------------------
 
 A Simple Library to simplify viewbinding delegation in your Android Application
+[![Version](https://img.shields.io/badge/version-1.0.0-green)](https://github.com/yogacp/android-viewbinding/releases/tag/1.0.0)
 
 ### Adding dependencies
 Add this to your build.gradle:
