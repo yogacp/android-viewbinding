@@ -1,6 +1,6 @@
 Android ViewBinding Library
 ========================================================
-[![Version](https://img.shields.io/badge/version-1.0.0-green)](https://github.com/yogacp/android-viewbinding/releases/tag/1.0.0)
+[![Version](https://img.shields.io/badge/version-1.0.1-green)](https://github.com/yogacp/android-viewbinding/releases/tag/1.0.1)
 ----------------------------------------------------------
 
 A Simple Library to simplify viewbinding delegation in your Android Application
