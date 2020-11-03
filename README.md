@@ -1,3 +1,7 @@
+<p align="center">
+<img alt="Android ViewBinding Kotlin" src=https://raw.githubusercontent.com/yogacp/android-viewbinding/master/assets/android_viewbinding_kotlin.png />
+</p>
+
 Android ViewBinding Library
 ========================================================
 [![Version](https://img.shields.io/badge/version-1.0.1-green)](https://github.com/yogacp/android-viewbinding/releases/tag/1.0.1)
