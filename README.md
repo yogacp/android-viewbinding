@@ -106,5 +106,6 @@ class SampleFragment : Fragment(R.layout.fragment_sample) {
 ### TODO:
 - Add DialogFragment viewbinding delegation
 - Add ViewGroup viewbinding delegation to use it in Custom View
+- Add RecyclerView viewbinding delegation
 
 ##### Happy coding :)
