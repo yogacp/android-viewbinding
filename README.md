@@ -65,7 +65,7 @@ Create your regular XML layout. For example, create **activity_sample.xml**:
 </LinearLayout>
 ```
 
-And use it in your Activity, just extend an binding variable that extend to your generated binding view and add ***by viewBinding()*** at the end:
+And use it in your **Activity**, just extend an binding variable that extend to your generated binding view and add ***by viewBinding()*** at the end:
 ```kotlin
 class SampleActivity : AppCompatActivity() {
 
@@ -84,7 +84,7 @@ class SampleActivity : AppCompatActivity() {
 }
 ```
 
-And here if you want to use it in your Fragment. For example, you create a xml layout with name ***fragment_sample.xml***:
+And here if you want to use it in your **Fragment**. For example, you create a xml layout with name ***fragment_sample.xml***:
 ```kotlin
 class SampleFragment : Fragment(R.layout.fragment_sample) {
 
@@ -103,7 +103,31 @@ class SampleFragment : Fragment(R.layout.fragment_sample) {
 }
 ```
 
+And here if you want to use it in your **BottomSheetDialogFragment**. For example, you create a xml layout with name ***bottomsheet_sample.xml***:
+```kotlin
+class SampleBottomSheetDialogFragment : BottomSheetDialogFragment() {
+
+    private val binding: BottomsheetSampleBinding by viewBinding()
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        return binding.root //return root from binding delegation
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.tvFragmentTitle.text = getString(R.string.sample_fragment_title)
+        binding.btnClose.setOnClickListener {
+            Toast.makeText(context, "Sample BottomSheetDialog Button Clicked", Toast.LENGTH_SHORT).show()
+        }
+
+        ....
+    }
+}
+```
+
 ### TODO:
+- ~~Add BottomSheetDialogFragment viewbinding delegation~~ --> Done
 - Add DialogFragment viewbinding delegation
 - Add ViewGroup viewbinding delegation to use it in Custom View
 - Add RecyclerView viewbinding delegation

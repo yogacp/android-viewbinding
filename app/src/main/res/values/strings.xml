@@ -5,6 +5,8 @@
     <string name="sample_button">Activity Button</string>
     <string name="sample_fragment_navigation">Navigate to Fragment View</string>
     <string name="sample_activity_navigation">Navigate to Activity View</string>
+    <string name="sample_bottomsheet_navigation">Open Bottomsheet Dialog View</string>
     <string name="sample_fragment_title">Sample Fragment TextView Title</string>
     <string name="sample_fragment_button">Fragment Button</string>
+    <string name="sample_close_button">Close</string>
 </resources>

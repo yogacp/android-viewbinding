@@ -27,4 +27,12 @@
         android:text="@string/sample_fragment_navigation"
         android:textStyle="bold"/>
 
+    <Button
+        android:id="@+id/btnBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/sample_bottomsheet_navigation"
+        android:textStyle="bold"/>
+
 </LinearLayout>

@@ -6,6 +6,7 @@ import android.viewbinding.library.activity.viewBinding
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import sample.viewbinding.android.R
+import sample.viewbinding.android.bottomsheetdialogfragment.SampleBottomSheetDialogFragment
 import sample.viewbinding.android.databinding.ActivitySampleBinding
 
 /**
@@ -33,6 +34,11 @@ class SampleActivity : AppCompatActivity() {
         binding.btnFragment.setOnClickListener {
             val intent = Intent(this, SampleActivityFragment::class.java)
             startActivity(intent)
+        }
+
+        binding.btnBottomSheet.setOnClickListener {
+            val bottomSheet = SampleBottomSheetDialogFragment()
+            bottomSheet.show(supportFragmentManager, "Bottomsheet")
         }
     }
 
