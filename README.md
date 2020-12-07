@@ -126,6 +126,12 @@ class SampleBottomSheetDialogFragment : BottomSheetDialogFragment() {
 }
 ```
 
+If you using proguard, add this line to your proguard-rules.pro.
+```
+#ViewBinding
+-keep class com.sample.app.databinding.** { *; }
+```
+
 ### TODO:
 - ~~Add BottomSheetDialogFragment viewbinding delegation~~ --> Done
 - Add DialogFragment viewbinding delegation
