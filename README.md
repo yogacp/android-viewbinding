@@ -4,7 +4,7 @@
 
 Android ViewBinding Library
 ========================================================
-[![Version](https://img.shields.io/badge/version-1.0.1-green)](https://github.com/yogacp/android-viewbinding/releases/tag/1.0.1)
+[![Version](https://img.shields.io/badge/version-1.0.2-green)](https://github.com/yogacp/android-viewbinding/releases/tag/1.0.2)
 ----------------------------------------------------------
 
 A simple library to simplify viewbinding delegation in your Android Application
@@ -129,7 +129,10 @@ class SampleBottomSheetDialogFragment : BottomSheetDialogFragment() {
 If you using proguard, add this line to your proguard-rules.pro.
 ```
 #ViewBinding
--keep class com.sample.app.databinding.** { *; }
+-keep class * implements androidx.viewbinding.ViewBinding {
+    public static *** bind(android.view.View);
+    public static *** inflate(android.view.LayoutInflater);
+}
 ```
 
 ### TODO:
