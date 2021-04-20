@@ -138,7 +138,5 @@ If you using proguard, add this line to your proguard-rules.pro.
 ### TODO:
 - ~~Add BottomSheetDialogFragment viewbinding delegation~~ --> Done
 - Add DialogFragment viewbinding delegation
-- Add ViewGroup viewbinding delegation to use it in Custom View
-- Add RecyclerView viewbinding delegation
 
 ##### Happy coding :)
