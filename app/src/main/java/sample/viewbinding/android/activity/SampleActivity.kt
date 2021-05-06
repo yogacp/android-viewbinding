@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import sample.viewbinding.android.R
 import sample.viewbinding.android.bottomsheetdialogfragment.SampleBottomSheetDialogFragment
 import sample.viewbinding.android.databinding.ActivitySampleBinding
+import sample.viewbinding.android.dialog.SampleDialogFragment
 
 /**
  * Created by Yoga C. Pranata on 31/10/2020.
@@ -39,6 +40,11 @@ class SampleActivity : AppCompatActivity() {
         binding.btnBottomSheet.setOnClickListener {
             val bottomSheet = SampleBottomSheetDialogFragment()
             bottomSheet.show(supportFragmentManager, "Bottomsheet")
+        }
+
+        binding.btnDialogFragment.setOnClickListener {
+            val dialog = SampleDialogFragment()
+            dialog.show(supportFragmentManager, "DialogFragment")
         }
     }
 

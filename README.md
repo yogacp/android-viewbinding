@@ -4,7 +4,7 @@
 
 Android ViewBinding Library
 ========================================================
-[![Version](https://img.shields.io/badge/version-1.0.2-green)](https://github.com/yogacp/android-viewbinding/releases/tag/1.0.2)
+[![Version](https://img.shields.io/badge/version-1.0.3-green)](https://github.com/yogacp/android-viewbinding/releases/tag/1.0.3)
 ----------------------------------------------------------
 
 A simple library to simplify viewbinding delegation in your Android Application
@@ -126,6 +126,29 @@ class SampleBottomSheetDialogFragment : BottomSheetDialogFragment() {
 }
 ```
 
+And here if you want to use it in your **DialogFragment**. For example, you create a xml layout with name ***dialog_sample.xml***:
+```kotlin
+class SampleDialogFragment : DialogFragment() {
+
+    private val binding: DialogSampleBinding by viewBinding()
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        return binding.root //return root from binding delegation
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.tvTitle.text = getString(R.string.sample_fragment_title)
+        binding.btnClose.setOnClickListener {
+            Toast.makeText(context, "Sample Dialog Button Clicked", Toast.LENGTH_SHORT).show()
+        }
+
+        ....
+    }
+}
+```
+
 If you using proguard, add this line to your proguard-rules.pro.
 ```
 #ViewBinding
@@ -134,9 +157,5 @@ If you using proguard, add this line to your proguard-rules.pro.
     public static *** inflate(android.view.LayoutInflater);
 }
 ```
-
-### TODO:
-- ~~Add BottomSheetDialogFragment viewbinding delegation~~ --> Done
-- Add DialogFragment viewbinding delegation
 
 ##### Happy coding :)

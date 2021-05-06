@@ -10,7 +10,7 @@ import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
 /**
- * Created by Yoga C. Pranata on 31/10/2020.
+ * Updated by Yoga C. Pranata on 06/05/2021.
  * Android Engineer
  *
  * How to use:
@@ -39,7 +39,13 @@ class FragmentViewBindingDelegate<T : ViewBinding>(
      */
     private val bindMethod = bindingClass.getMethod("bind", View::class.java)
 
-    init {
+    @Suppress("UNCHECKED_CAST")
+    override fun getValue(thisRef: Fragment, property: KProperty<*>): T {
+        binding?.let { return it }
+
+        /**
+         * Adding observer to the fragment lifecycle
+         */
         fragment.lifecycle.addObserver(object : DefaultLifecycleObserver {
             override fun onCreate(owner: LifecycleOwner) {
                 fragment.viewLifecycleOwnerLiveData.observe(fragment) { viewLifecycleOwner ->
@@ -54,11 +60,7 @@ class FragmentViewBindingDelegate<T : ViewBinding>(
                 }
             }
         })
-    }
 
-    @Suppress("UNCHECKED_CAST")
-    override fun getValue(thisRef: Fragment, property: KProperty<*>): T {
-        binding?.let { return it }
 
         /**
          * Checking the fragment lifecycle
@@ -67,6 +69,7 @@ class FragmentViewBindingDelegate<T : ViewBinding>(
         if (!lifecycle.currentState.isAtLeast(Lifecycle.State.INITIALIZED)) {
             error("Cannot access view bindings. View lifecycle is ${lifecycle.currentState}!")
         }
+
 
         /**
          * Bind layout
