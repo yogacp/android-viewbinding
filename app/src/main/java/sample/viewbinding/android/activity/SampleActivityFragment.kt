@@ -3,7 +3,6 @@ package sample.viewbinding.android.activity
 import android.os.Bundle
 import android.viewbinding.library.activity.viewBinding
 import androidx.appcompat.app.AppCompatActivity
-import sample.viewbinding.android.R
 import sample.viewbinding.android.databinding.ActivityFragmentSampleBinding
 import sample.viewbinding.android.fragment.SampleFragment
 
