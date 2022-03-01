@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidViewbinding">
 
-        <activity android:name=".activity.SampleActivity">
+        <activity android:name=".activity.SampleActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
